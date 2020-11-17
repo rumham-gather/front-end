@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class RecipeDetailPage extends Component {
+export default class EventsDetail extends Component {
     render() {
         return (
             <div>
-                Recipe details
+                Deets
             </div>
         )
     }

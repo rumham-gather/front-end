@@ -8,10 +8,12 @@ import {
 } from "react-router-dom";
 import Home from './Home.js';
 import Header from './Header.js';
-import ListPage from './ListPage.js';
-import DetailPage from './DetailPage.js';
+import RecipesList from './RecipesList.js';
+import RecipesDetail from './RecipesDetail.js';
 import FavoritesPage from './FavoritesPage.js';
 import AboutUs from './AboutUs.js';
+import EventsList from './EventsList.js';
+import EventsDetail from './EventsDetail.js';
 
 export default class App extends Component {
   render() {
@@ -33,7 +35,7 @@ export default class App extends Component {
               exact
               path='/recipes'
               render={(routerProps) => 
-                <ListPage
+                <RecipesList
                   {...routerProps}
                 />
               }
@@ -42,7 +44,7 @@ export default class App extends Component {
               exact
               path='/recipes/:id'
               render={(routerProps) => 
-                <DetailPage
+                <RecipesDetail
                   {...routerProps}
                 />
               }
@@ -61,6 +63,24 @@ export default class App extends Component {
               path='/about'
               render={(routerProps) => 
                 <AboutUs
+                  {...routerProps}
+                />
+              }
+            />
+            <Route
+              exact
+              path='/events'
+              render={(routerProps) => 
+                <EventsList
+                  {...routerProps}
+                />
+              }
+            />
+            <Route
+              exact
+              path='/events/:id'
+              render={(routerProps) => 
+                <EventsDetail
                   {...routerProps}
                 />
               }
