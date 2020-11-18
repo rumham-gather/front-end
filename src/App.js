@@ -14,17 +14,43 @@ import AboutUs from './Components/AboutUs.js';
 import Burg from './Components/Burg.js';
 import EventsList from './Components/EventsList.js';
 import EventsDetail from './Components/EventsDetail.js';
+import PrivateRoute from './Burger/PrivateRoutes';
+// import ScrollMenu from './Burger/Scrollmenu.js';
 
 
 export default class App extends Component {
+  state = {
+    email: localStorage.getItem('EMAIL') || '',
+    token: localStorage.getItem('TOKEN') || '',
+  }
+
+  changeTokenAndUsername = (token, email) => {
+    localStorage.setItem('TOKEN', token);
+    localStorage.setItem('EMAIL', email);
+
+    this.setState({
+      email: email,
+      token: token
+    })
+  }
+
+  logOut = () => {
+    localStorage.setItem('TOKEN', '');
+    localStorage.setItem('EMAIL', '');
+
+    this.setState({
+      email: '',
+      token: ''
+    })
+  }
+
   render() {
     return (
       <div>
         <Router>
           <Header />
-         
           <Burg />
-          
+          {/* <ScrollMenu /> */}
           <Switch>
             <Route
               exact
@@ -46,7 +72,7 @@ export default class App extends Component {
             />
             <Route
               exact
-              path='/recipes/:id'
+              path='/api/recipes/:id'
               render={(routerProps) => 
                 <RecipesDetail
                   {...routerProps}
@@ -92,6 +118,7 @@ export default class App extends Component {
           </Switch>
         </Router>
       </div>
+      
 
     )
   }
