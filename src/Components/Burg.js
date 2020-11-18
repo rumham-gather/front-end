@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+import '../index.css';
+import reportWebVitals from '../reportWebVitals';
 import { render } from "react-dom";
 import Popup from "reactjs-popup";
-import BurgerIcon from "./Burger/Burgericon.js";
-import Menu from "./Burger/Menu.js";
-import "./Burger.css";
+import BurgerIcon from "../Burger/Burgericon.js";
+import Menu from "../Burger/Menu.js";
+import "../Burger.css";
 
 
 const styles = {
@@ -45,4 +45,4 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-export default Burg 
+export default Burg

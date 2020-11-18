@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import request from 'superagent'
+import Signup from './Signup.js';
 
 
 export default class Login extends Component {
@@ -63,8 +64,11 @@ export default class Login extends Component {
                           Log in!
                       </button>
                   }
+                  <Signup />
               </form>
           </div>
       )
   }
 }
+
+
