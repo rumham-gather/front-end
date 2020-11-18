@@ -22,6 +22,7 @@ export default class App extends Component {
         <Router>
           <Header />
           <Burg />
+          
           <Switch>
             <Route
               exact
@@ -89,6 +90,7 @@ export default class App extends Component {
           </Switch>
         </Router>
       </div>
+
     )
   }
 }

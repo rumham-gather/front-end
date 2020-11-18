@@ -68,6 +68,8 @@ export default class Signup extends Component {
                             Sign up!
                         </button>
                     }
+                    
+                    <p/>
                 </form>
             </div>
         )
