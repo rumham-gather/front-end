@@ -15,7 +15,6 @@ import Burg from './Burg.js';
 import EventsList from './EventsList.js';
 import EventsDetail from './EventsDetail.js';
 
-
 export default class App extends Component {
   render() {
     return (
