@@ -19,14 +19,14 @@ export default class Login extends Component {
 
       try {
       const user = await request
-          .post('https://warm-river-88711.herokuapp.com/auth/signin')
+          .post(`${process.env.REACT_APP_BACK_END_URL}/auth/signin`)
           .send(this.state); // we can send state because the keys are the same on the front and back end
 
       this.setState({ loading: false })
       
       this.props.changeTokenAndUsername(user.body.email, user.body.token);
       
-      this.props.history.push('/todos');
+      this.props.history.push('/');
       } catch(err){
           this.setState({ err: 'Oops! Must have proper email to sign in.'})
       }
