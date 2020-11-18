@@ -3,53 +3,50 @@ import request from 'superagent';
 
 
 
-export default class Signup extends Component {
-
+export default class Login extends Component {
     state = {
         email: '',
         password: '',
         loading: false,
         err: null
     }
-
+  
     handleSubmit = async (e) => {
         e.preventDefault();
-
-    
-
+  
+        
         this.setState({ loading:true })
+  
         try {
-
-             const user = await request
-            .post(`${process.env.REACT_APP_BACK_END_URL}/auth/signup`)
+        const user = await request
+            .post(`${process.env.REACT_APP_BACK_END_URL}/auth/signin`)
             .send(this.state); // we can send state because the keys are the same on the front and back end
-
+  
         this.setState({ loading: false })
         
         this.props.changeTokenAndUsername(user.body.email, user.body.token);
-
+        
         this.props.history.push('/');
-        }  catch(err){
-            this.setState({ err: 'Opps!'})
+        } catch(err){
+            this.setState({ err: 'Oops! Must have proper email to sign in.'})
         }
     }
-    
+  
     render() {
         return (
             <div>
-                <h2>Sign up</h2>
+
                 <form onSubmit={this.handleSubmit}>
+                    <h2>Log in</h2>
+                    Email:
                     <label>
-                    {this.state.err && <div>
+                        {this.state.err && <div>
                             {this.state.err}
                              </div>}
-                        Email:
-                        <br/>
+                             <br/>
                         <input 
-                        value={this.state.email}
-                        type="email" required
                         onChange={(e) => this.setState({ email: e.target.value })}
-                         />
+                        value={this.state.email} />
                     </label>
                     <br/>
                     <label>
@@ -62,15 +59,16 @@ export default class Signup extends Component {
                     <br/>
                     {
                         this.state.loading 
-                        ? 'Simmering'
-                        : <button>
-                            Sign up!
+                        ? 'Simmering...'
+                        :<button>
+                            Log in!
                         </button>
                     }
-                    
-                    <p/>
                 </form>
             </div>
         )
     }
-}
+  }
+  
+  
+  

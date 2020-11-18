@@ -14,6 +14,8 @@ import AboutUs from './Components/AboutUs.js';
 import Burg from './Components/Burg.js';
 import EventsList from './Components/EventsList.js';
 import EventsDetail from './Components/EventsDetail.js';
+import PrivateRoute from './Burger/PrivateRoutes';
+// import ScrollMenu from './Burger/Scrollmenu.js';
 
 
 export default class App extends Component {
@@ -22,9 +24,8 @@ export default class App extends Component {
       <div>
         <Router>
           <Header />
-         
           <Burg />
-          
+          {/* <ScrollMenu /> */}
           <Switch>
             <Route
               exact
@@ -92,6 +93,7 @@ export default class App extends Component {
           </Switch>
         </Router>
       </div>
+      
 
     )
   }

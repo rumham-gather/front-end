@@ -9,6 +9,7 @@
     "material-ui-search-bar": "^1.0.0-beta.14",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-horizontal-scrolling-menu": "^0.7.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "reactjs-popup": "^2.0.4",
