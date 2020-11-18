@@ -15,12 +15,14 @@ import Burg from './Components/Burg.js';
 import EventsList from './Components/EventsList.js';
 import EventsDetail from './Components/EventsDetail.js';
 
+
 export default class App extends Component {
   render() {
     return (
       <div>
         <Router>
           <Header />
+         
           <Burg />
           
           <Switch>
