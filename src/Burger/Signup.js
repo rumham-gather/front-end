@@ -20,16 +20,15 @@ export default class Signup extends Component {
         this.setState({ loading:true })
         try {
 
-        
-        const user = await request
-            .post('https://warm-river-88711.herokuapp.com/auth/signup')
+             const user = await request
+            .post(`${process.env.REACT_APP_BACK_END_URL}/auth/signup`)
             .send(this.state); // we can send state because the keys are the same on the front and back end
 
         this.setState({ loading: false })
         
         this.props.changeTokenAndUsername(user.body.email, user.body.token);
 
-        this.props.history.push('/todos');
+        this.props.history.push('/recipes');
         }  catch(err){
             this.setState({ err: 'oops!'})
         }
