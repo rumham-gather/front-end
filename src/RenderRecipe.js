@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import request from 'superagent'
+import { Link } from 'react-router-dom';
 
 export default class RenderRecipe extends Component {
     state = {
@@ -11,10 +11,12 @@ export default class RenderRecipe extends Component {
             <div>
                 {
                     this.props.recipeList.map(recipe =>
+                        <Link to={`/recipes/${recipe.id}`}>
                         <div className='recipe-item'>
-                        <img src={recipe.image_url} alt={recipe.title} />
-                        <p className='title'>{recipe.title}</p>
-                        </div>)
+                            <img src={recipe.image_url} alt={recipe.title} />
+                            <p className='title'>{recipe.title}</p>
+                        </div>
+                        </Link>)
                 }
             </div>
         )
