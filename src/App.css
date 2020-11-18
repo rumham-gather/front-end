@@ -29,3 +29,20 @@ body {
   text-align: center;
 }
 
+.bio-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bio-item {
+  width: 250px;
+  height: 370px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+}
+
