@@ -16,20 +16,21 @@ const styles = {
 };
 
 const Burg = () => (
+  <main>
   <div style={styles}>
     <Popup
       modal
-      overlayStyle={{ background: "rgb(239, 164, 164)" }}
-     
+      contentStyle={{ background: "rgb(239, 164, 164)", borderRadius: "20px"}}
       closeOnDocumentClick={false}
       trigger={open => <BurgerIcon open={open} />}
     >
       { <Menu />}
     </Popup>
   </div>
+  </main>
 );
 
-
+export default Burg
 
 render(<Burg />, document.getElementById("root"));
 
@@ -44,5 +45,3 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-export default Burg
