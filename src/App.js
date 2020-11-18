@@ -5,15 +5,15 @@ import {
   Route, 
   Switch,
 } from "react-router-dom";
-import Home from './Home.js';
-import Header from './Header.js';
-import RecipesList from './RecipesList.js';
-import RecipesDetail from './RecipesDetail.js';
-import FavoritesPage from './FavoritesPage.js';
-import AboutUs from './AboutUs.js';
-import Burg from './Burg.js';
-import EventsList from './EventsList.js';
-import EventsDetail from './EventsDetail.js';
+import Home from './Components/Home.js';
+import Header from './Components/Header.js';
+import RecipesList from './Components/RecipesList.js';
+import RecipesDetail from './Components/RecipesDetail.js';
+import FavoritesPage from './Components/FavoritesPage.js';
+import AboutUs from './Components/AboutUs.js';
+import Burg from './Components/Burg.js';
+import EventsList from './Components/EventsList.js';
+import EventsDetail from './Components/EventsDetail.js';
 
 export default class App extends Component {
   render() {
