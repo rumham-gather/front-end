@@ -21,8 +21,12 @@ export default class RecipeListPage extends Component {
         return (
             <div>
                 Look at all those recipes
-                <RenderRecipe
-                    recipeList={this.state.recipes} />
+                {
+                    this.state.recipes.length === 0
+                    ? <div>Simmering...</div>
+                    : <RenderRecipe
+                        recipeList={this.state.recipes} />
+                }
             </div>
         )
     }
