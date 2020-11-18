@@ -19,6 +19,31 @@ import PrivateRoute from './Burger/PrivateRoutes';
 
 
 export default class App extends Component {
+  state = {
+    email: localStorage.getItem('EMAIL') || '',
+    token: localStorage.getItem('TOKEN') || '',
+  }
+
+  changeTokenAndUsername = (token, email) => {
+    localStorage.setItem('TOKEN', token);
+    localStorage.setItem('EMAIL', email);
+
+    this.setState({
+      email: email,
+      token: token
+    })
+  }
+
+  logOut = () => {
+    localStorage.setItem('TOKEN', '');
+    localStorage.setItem('EMAIL', '');
+
+    this.setState({
+      email: '',
+      token: ''
+    })
+  }
+
   render() {
     return (
       <div>
@@ -47,7 +72,7 @@ export default class App extends Component {
             />
             <Route
               exact
-              path='/recipes/:id'
+              path='/api/recipes/:id'
               render={(routerProps) => 
                 <RecipesDetail
                   {...routerProps}

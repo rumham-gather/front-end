@@ -7,10 +7,16 @@ export default class RecipeDetailPage extends Component {
         recipes: []
     }
 
-    componentDidMount = async () => {
-        const response = await request.get(`https://floating-caverns-16024.herokuapp.com/recipes/${this.props.match.params.id}`)
+    fetchRecipes = async () => {
+        const response = await request 
+            .get(`${process.env.REACT_APP_BACK_END_URL}/${this.props.match.params.id}`)
+            .set('Authorization', this.props.token)
 
-        this.setState({ recipes: response.body })
+            this.setState({ recipes: response.body });
+    }
+
+    componentDidMount = async () => {
+        await this.fetchRecipes();
     }
 
     render() {
