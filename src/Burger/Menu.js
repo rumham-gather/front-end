@@ -10,9 +10,9 @@ import Signup from './Signup.js';
               return (
                   <div>
                         <div className="menu"></div>
-                            <Login/>
+                            <Login changeTokenAndUsername = {this.props.changeTokenAndUsername} />
           
-                            <Signup />
+                            <Signup changeTokenAndUsername = {this.props.changeTokenAndUsername}/>
     
                 </div>
                 

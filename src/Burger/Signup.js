@@ -7,6 +7,7 @@ export default class Signup extends Component {
 
     state = {
         email: '',
+        username: '',
         password: '',
         loading: false,
         err: null
@@ -26,7 +27,7 @@ export default class Signup extends Component {
 
         this.setState({ loading: false })
         
-        this.props.changeTokenAndUsername(user.body.email, user.body.token);
+        this.props.changeTokenAndUsername(user.body.token, user.body.email, user.body.username);
 
         this.props.history.push('/');
         }  catch(err){
@@ -49,6 +50,19 @@ export default class Signup extends Component {
                         value={this.state.email}
                         type="email" required
                         onChange={(e) => this.setState({ email: e.target.value })}
+                         />
+                    </label>
+                    <br/>
+                    <label>
+                    {this.state.err && <div>
+                            {this.state.err}
+                             </div>}
+                        Username:
+                        <br/>
+                        <input 
+                        value={this.state.username}
+                        type="username" required
+                        onChange={(e) => this.setState({ username: e.target.value })}
                          />
                     </label>
                     <br/>
