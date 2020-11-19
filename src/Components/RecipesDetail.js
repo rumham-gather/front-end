@@ -4,22 +4,29 @@ import RenderDetail from './RenderDetail.js';
 
 export default class RecipeDetailPage extends Component {
     state = {
-        recipes: []
+        recipe: {}
+    }
+
+    fetchRecipes = async () => {
+        const response = await request 
+            .get(`${process.env.REACT_APP_BACK_END_URL}/api/recipes/${this.props.match.params.id}`)
+
+            .set('Authorization', this.props.token)
+            console.log(response.body);
+            this.setState({ recipe: response.body });
     }
 
     componentDidMount = async () => {
-        const response = await request.get(`https://floating-caverns-16024.herokuapp.com/recipes/${this.props.match.params.id}`)
-
-        this.setState({ recipes: response.body })
+        await this.fetchRecipes();
     }
 
     render() {
         return (
             <div>
                 {
-                    this.state.recipes.length === 0
+                    this.state.recipe.length === 0
                     ? <div>Simmering...</div>
-                    : <RenderDetail recipeList={this.state.recipes} />
+                    : <RenderDetail recipe={this.state.recipe} />
                 }
             </div>
         )

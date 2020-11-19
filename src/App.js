@@ -14,14 +14,48 @@ import AboutUs from './Components/AboutUs.js';
 import Burg from './Components/Burg.js';
 import EventsList from './Components/EventsList.js';
 import EventsDetail from './Components/EventsDetail.js';
+import PrivateRoute from './Burger/PrivateRoutes.js';
+
+
 
 export default class App extends Component {
+  state = {
+    email: localStorage.getItem('EMAIL') || '',
+    token: localStorage.getItem('TOKEN') || '',
+    username: localStorage.getItem('USERNAME') || '',
+  }
+
+  changeTokenAndUsername = (token, email, username) => {
+    localStorage.setItem('TOKEN', token);
+    localStorage.setItem('EMAIL', email);
+    localStorage.setItem('USERNAME', username);
+
+    this.setState({
+      email: email,
+      token: token,
+      username: username
+    })
+  }
+
+  logOut = () => {
+    localStorage.setItem('TOKEN', '');
+    localStorage.setItem('EMAIL', '');
+    localStorage.setItem('USERNAME', '');
+
+    this.setState({
+      email: '',
+      token: '',
+      username: ''
+    })
+  }
+
   render() {
     return (
       <div>
         <Router>
           <Header />
-          <Burg />
+          <Burg changeTokenAndUsername={this.changeTokenAndUsername} />
+          {/* <ScrollMenu /> */}
           <Switch>
             <Route
               exact
@@ -32,30 +66,32 @@ export default class App extends Component {
                 />
               }
             />
-            <Route
+            <PrivateRoute
               exact
               path='/recipes'
+              token={this.state.token}
               render={(routerProps) => 
                 <RecipesList
                   {...routerProps}
-                />
+                token={this.state.token} />
               }
             />
-            <Route
+            <PrivateRoute
               exact
               path='/recipes/:id'
+              token={this.state.token}
               render={(routerProps) => 
                 <RecipesDetail
-                  {...routerProps}
-                />
+                  {...routerProps} token={this.state.token} />
               }
             />
-            <Route
+            <PrivateRoute
               exact
               path='/favorites'
+              token={this.state.token}
               render={(routerProps) => 
                 <FavoritesPage
-                  {...routerProps}
+                  {...routerProps} token={this.state.token}
                 />
               }
             />
@@ -89,6 +125,8 @@ export default class App extends Component {
           </Switch>
         </Router>
       </div>
+      
+
     )
   }
 }
