@@ -14,8 +14,8 @@ import AboutUs from './Components/AboutUs.js';
 import Burg from './Components/Burg.js';
 import EventsList from './Components/EventsList.js';
 import EventsDetail from './Components/EventsDetail.js';
-import PrivateRoute from './Burger/PrivateRoutes';
-// import ScrollMenu from './Burger/Scrollmenu.js';
+import PrivateRoute from './Burger/PrivateRoutes.js';
+
 
 
 export default class App extends Component {
@@ -66,30 +66,32 @@ export default class App extends Component {
                 />
               }
             />
-            <Route
+            <PrivateRoute
               exact
               path='/recipes'
+              token={this.state.token}
               render={(routerProps) => 
                 <RecipesList
                   {...routerProps}
                 token={this.state.token} />
               }
             />
-            <Route
+            <PrivateRoute
               exact
-              path='/api/recipes/:id'
+              path='/recipes/:id'
+              token={this.state.token}
               render={(routerProps) => 
                 <RecipesDetail
-                  {...routerProps}
-                />
+                  {...routerProps} token={this.state.token} />
               }
             />
-            <Route
+            <PrivateRoute
               exact
               path='/favorites'
+              token={this.state.token}
               render={(routerProps) => 
                 <FavoritesPage
-                  {...routerProps}
+                  {...routerProps} token={this.state.token}
                 />
               }
             />
