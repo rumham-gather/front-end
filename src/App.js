@@ -54,7 +54,7 @@ export default class App extends Component {
       <div>
         <Router>
           <Header />
-          <Burg />
+          <Burg changeTokenAndUsername={this.changeTokenAndUsername} />
           {/* <ScrollMenu /> */}
           <Switch>
             <Route
