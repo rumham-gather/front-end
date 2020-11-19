@@ -29,7 +29,7 @@ export default class Signup extends Component {
         console.log(user.body);
         this.props.changeTokenAndUsername(user.body.token, user.body.email, user.body.display_name);
 
-        this.props.history.push('/');
+        // this.props.history.push('/');
         }  catch(err){
             this.setState({ err: 'Oops!'})
         }
