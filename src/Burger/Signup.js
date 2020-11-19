@@ -7,6 +7,7 @@ export default class Signup extends Component {
 
     state = {
         email: '',
+        display_name: '',
         password: '',
         loading: false,
         err: null
@@ -25,12 +26,12 @@ export default class Signup extends Component {
             .send(this.state); // we can send state because the keys are the same on the front and back end
 
         this.setState({ loading: false })
-        
-        this.props.changeTokenAndUsername(user.body.email, user.body.token);
+        console.log(user.body);
+        this.props.changeTokenAndUsername(user.body.token, user.body.email, user.body.display_name);
 
         this.props.history.push('/');
         }  catch(err){
-            this.setState({ err: 'Opps!'})
+            this.setState({ err: 'Oops!'})
         }
     }
     
@@ -49,6 +50,19 @@ export default class Signup extends Component {
                         value={this.state.email}
                         type="email" required
                         onChange={(e) => this.setState({ email: e.target.value })}
+                         />
+                    </label>
+                    <br/>
+                    <label>
+                    {this.state.err && <div>
+                            {this.state.err}
+                             </div>}
+                        Display Name:
+                        <br/>
+                        <input 
+                        value={this.state.display_name}
+                        type="text" required
+                        onChange={(e) => this.setState({ display_name: e.target.value })}
                          />
                     </label>
                     <br/>
