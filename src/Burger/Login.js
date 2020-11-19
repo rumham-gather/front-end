@@ -16,7 +16,7 @@ export default class Login extends Component {
         e.preventDefault();
   
         
-        this.setState({ loading:true })
+        this.setState({ loading:true, err:null })
   
         try {
         const user = await request
@@ -27,13 +27,14 @@ export default class Login extends Component {
         
         this.props.changeTokenAndUsername(user.body.token, user.body.email, user.body.display_name);
         
-        this.props.history.push('/');
+        // this.props.history.history.push('/recipes')
         } catch(err){
             this.setState({ err: 'Oops! Must have proper email to sign in.'})
         }
     }
   
     render() {
+        console.log(this.state.err);
         return (
             <div>
 
