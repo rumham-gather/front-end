@@ -22,25 +22,30 @@ export default class App extends Component {
   state = {
     email: localStorage.getItem('EMAIL') || '',
     token: localStorage.getItem('TOKEN') || '',
+    username: localStorage.getItem('USERNAME') || '',
   }
 
-  changeTokenAndUsername = (token, email) => {
+  changeTokenAndUsername = (token, email, username) => {
     localStorage.setItem('TOKEN', token);
     localStorage.setItem('EMAIL', email);
+    localStorage.setItem('USERNAME', username);
 
     this.setState({
       email: email,
-      token: token
+      token: token,
+      username: username
     })
   }
 
   logOut = () => {
     localStorage.setItem('TOKEN', '');
     localStorage.setItem('EMAIL', '');
+    localStorage.setItem('USERNAME', '');
 
     this.setState({
       email: '',
-      token: ''
+      token: '',
+      username: ''
     })
   }
 
@@ -49,7 +54,7 @@ export default class App extends Component {
       <div>
         <Router>
           <Header />
-          <Burg />
+          <Burg changeTokenAndUsername={this.changeTokenAndUsername} />
           {/* <ScrollMenu /> */}
           <Switch>
             <Route

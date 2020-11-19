@@ -6,6 +6,7 @@ import request from 'superagent';
 export default class Login extends Component {
     state = {
         email: '',
+        display_name: '',
         password: '',
         loading: false,
         err: null
@@ -24,7 +25,7 @@ export default class Login extends Component {
   
         this.setState({ loading: false })
         
-        this.props.changeTokenAndUsername(user.body.email, user.body.token);
+        this.props.changeTokenAndUsername(user.body.token, user.body.email, user.body.display_name);
         
         this.props.history.push('/');
         } catch(err){

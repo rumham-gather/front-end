@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import ScrollMenu from '../Burger/Scrollmenu.js';
 
 export default class Home extends Component {
     render() {
@@ -6,6 +7,7 @@ export default class Home extends Component {
             <main>
                 <div className="homepage">
                     HOME PAGE
+                    <ScrollMenu />
                     
                     
 
