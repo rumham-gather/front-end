@@ -27,7 +27,7 @@ export default class AboutUs extends Component {
                 <div className='bio-item'>
                     <p className='name'>Sydney James</p>
                     <img className='photo' src='http://placekitten.com/150/200' alt=''/>
-                    <p className='bio'>My name is Sydney aka Wallace's mom aka mom aka Sydney Fieri. Flavortown? Let's go. </p>
+                    <p className='bio'>Sydney is a fullstack Javascript developer and avid home cook. In her spare time she likes to garden, do house projects, and play with her dogs. </p>
                 </div>
             </div>
         )
