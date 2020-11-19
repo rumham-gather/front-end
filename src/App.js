@@ -14,6 +14,7 @@ import AboutUs from './Components/AboutUs.js';
 import Burg from './Components/Burg.js';
 import EventsList from './Components/EventsList.js';
 import EventsDetail from './Components/EventsDetail.js';
+import PrivateRoute from './Burger/PrivateRoutes.js';
 
 
 
