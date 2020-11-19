@@ -66,30 +66,32 @@ export default class App extends Component {
                 />
               }
             />
-            <Route
+            <PrivateRoute
               exact
               path='/recipes'
+              token={this.state.token}
               render={(routerProps) => 
                 <RecipesList
                   {...routerProps}
                 token={this.state.token} />
               }
             />
-            <Route
+            <PrivateRoute
               exact
-              path='/api/recipes/:id'
+              path='/recipes/:id'
+              token={this.state.token}
               render={(routerProps) => 
                 <RecipesDetail
-                  {...routerProps}
-                />
+                  {...routerProps} token={this.state.token} />
               }
             />
-            <Route
+            <PrivateRoute
               exact
               path='/favorites'
+              token={this.state.token}
               render={(routerProps) => 
                 <FavoritesPage
-                  {...routerProps}
+                  {...routerProps} token={this.state.token}
                 />
               }
             />
