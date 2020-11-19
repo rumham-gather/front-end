@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import request from 'superagent'
 import Login from "./Login.js";
 import Signup from './Signup.js';
 

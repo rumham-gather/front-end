@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import reactHtmlParser from 'react-html-parser';
+// import reactHtmlParser from 'react-html-parser';
 
 export default class RenderRecipe extends Component {
     state = {
