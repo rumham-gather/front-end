@@ -4,7 +4,9 @@ import RenderDetail from './RenderDetail.js';
 
 export default class RecipeDetailPage extends Component {
     state = {
-        recipe: {}
+        recipe: {
+            extendedIngredients: []
+        }
     }
 
     fetchRecipes = async () => {
