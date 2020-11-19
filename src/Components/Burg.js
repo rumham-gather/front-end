@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
 import '../index.css';
-import reportWebVitals from '../reportWebVitals';
-import { render } from "react-dom";
 import Popup from "reactjs-popup";
 import BurgerIcon from "../Burger/Burgericon.js";
 import Menu from "../Burger/Menu.js";
