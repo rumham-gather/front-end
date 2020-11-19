@@ -11,7 +11,7 @@ export default class AboutUs extends Component {
                 </div>
                 <div className='bio-item'>
                     <p className='name'>Jena Boehm</p>
-                    <img className='photo' src='http://placekitten.com/150/200'  alt=''/>
+                    <img className='photo' src='./jena-bio-pic.jpg' width='150px' height='200px'  alt=''/>
                     <p className='bio'>I am Jena. I code and things. La la la. </p>
                 </div>
                 <div className='bio-item'>
