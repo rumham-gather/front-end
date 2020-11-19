@@ -72,7 +72,7 @@ export default class App extends Component {
               render={(routerProps) => 
                 <RecipesList
                   {...routerProps}
-                />
+                token={this.state.token} />
               }
             />
             <Route
