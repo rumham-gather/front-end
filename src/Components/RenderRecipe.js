@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-// import reactHtmlParser from 'react-html-parser';
+
 
 export default class RenderRecipe extends Component {
     state = {
@@ -19,7 +19,6 @@ export default class RenderRecipe extends Component {
                             <p className='title'>{recipe.title}</p>
                         </div>
                         </Link>
-                        {/* <p className='title'>{reactHtmlParser(recipe.summary)}</p> */}
                         </div>)
                 }
             </div>
