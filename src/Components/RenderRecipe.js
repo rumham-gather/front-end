@@ -13,7 +13,7 @@ export default class RenderRecipe extends Component {
                     this.props.recipeList.map(recipe =>
                         <Link to={`/recipes/${recipe.id}`}>
                         <div className='recipe-item'>
-                            <img src={recipe.image_url} alt={recipe.title} />
+                            <img src={recipe.image} alt={recipe.title} />
                             <p className='title'>{recipe.title}</p>
                         </div>
                         </Link>)
