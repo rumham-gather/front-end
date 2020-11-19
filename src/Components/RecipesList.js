@@ -12,9 +12,10 @@ export default class RecipeListPage extends Component {
     }
 
     fetchRecipes = async () => {
-        const response = await request.get(`https://floating-caverns-16024.herokuapp.com/recipes`)
-
-        this.setState({ recipes: response.body })
+        const response = await request.get(`https://floating-caverns-16024.herokuapp.com/api/recipes`)
+        .set('Authorization', this.props.token)
+        console.log(response.body);
+        this.setState({ recipes: response.body.recipes })
     }
 
     render() {
