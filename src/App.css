@@ -21,6 +21,7 @@ header {
   padding-left: 2%;
   padding-bottom: 1%;
   text-align: left;
+  box-shadow: 0px 1px 5px gray;
 }
 
 body {
@@ -76,5 +77,13 @@ body {
 
 img {
   border-radius: 10px;
+}
+
+a:visited {  
+  color: rgb(219, 103, 103)
+}
+
+a:hover {
+  text-decoration: underline
 }
 
