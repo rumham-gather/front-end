@@ -28,7 +28,7 @@ export default class RecipeDetailPage extends Component {
                 {
                     this.state.recipe.length === 0
                     ? <div>Simmering...</div>
-                    : <RenderDetail recipe={this.state.recipe} />
+                    : <RenderDetail recipe={this.state.recipe} token={this.props.token} />
                 }
             </div>
         )
