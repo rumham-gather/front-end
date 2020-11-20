@@ -6,24 +6,20 @@ import './scroll.css';
 
 // list of items
 const list = [
-  { name: 'item1' },
-  { name: 'item2' },
-  { name: 'item3' },
-  { name: 'item4' },
-  { name: 'item5' },
-  { name: 'item6' },
-  { name: 'item7' },
-  { name: 'item8' },
-  { name: 'item9' }
+  { name: './smoothie.png' },
+  { name: './quiche.png' },
+  { name: './corn.png' },
+  { name: './salad.png' },
+  { name: './ratatouille.png' },
+  { name: './mango.png' },
+  { name: './cupcakes.png' },
+  { name: './caesar.png' },
+  { name: './lasagna.png' },
+  { name: './shrimp.png' }
 ];
 
 // One item component
 // selected prop will be passed
-const MenuItem = ({text, selected}) => {
-  return <div
-    className={`menu-item ${selected ? 'active' : ''}`}
-    >{text}</div>;
-};
 
 // All items component
 // Important! add unique key
@@ -31,7 +27,7 @@ export const Menu = (list, selected) =>
   list.map(el => {
     const {name} = el;
 
-    return <MenuItem text={name} key={name} selected={selected} />;
+    return <img src={el.name} key={name} selected={selected} alt={name} />;
   });
 
 
