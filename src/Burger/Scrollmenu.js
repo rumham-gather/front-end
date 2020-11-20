@@ -18,8 +18,6 @@ const list = [
   { name: './shrimp.png' }
 ];
 
-// One item component
-// selected prop will be passed
 
 // All items component
 // Important! add unique key
