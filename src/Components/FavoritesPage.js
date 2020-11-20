@@ -50,13 +50,13 @@ export default class FavoritesPage extends Component {
 
                         return (
                         <div>
-                            <Link to={`/recipes/${recipe.id}`}>
                             <div className='recipe-item'>
-                                <img src={recipe.image} alt={recipe.title} />
-                                <p className='title'>{recipe.title}</p>
-                            </div>
+                            <Link to={`/recipes/${recipe.id}`}>
+                                <img src={recipe.image} alt={recipe.title} width='300'/>
                             </Link>
-                            <button onClick={() => this.handleDelete(favorite.id)}>Delete from Recipe Box</button>
+                                <p className='recipe-title'>{recipe.title}</p>
+                            <button className='delete-button' onClick={() => this.handleDelete(favorite.id)}>Delete from Recipe Box</button>
+                            </div>
                         </div>
                         )
                     })
