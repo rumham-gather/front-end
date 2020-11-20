@@ -70,6 +70,19 @@ body {
   line-height:17px;
 }
 
+.mid-content-left {
+  float: left;
+  width: 30%;
+  margin: 10%;
+  margin-top: 15%;
+}
+
+.mid-content-right {
+  float: right;
+  width: 30%;
+  margin: 10%;
+  margin-top: 15%;
+}
 .social-links {
   align-self: center;
   justify-content: space-between;
