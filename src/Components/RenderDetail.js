@@ -43,7 +43,7 @@ export default class RenderDetail extends Component {
                     <button className='add-button' onClick={() => this.handleFavorite(this.props.recipe)}>Add to Recipe Box</button>
                             <br/>
 
-                            <img src={this.props.recipe.image} alt={this.props.recipe.title} />
+                            <img src={this.props.recipe.image} alt={this.props.recipe.title} width='300px'/>
 
                             <p className='section-header'>Dietary Information: </p>
                             <p className='section-details'>{this.props.recipe.diets}</p>
