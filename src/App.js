@@ -11,7 +11,6 @@ import RecipesList from './Components/RecipesList.js';
 import RecipesDetail from './Components/RecipesDetail.js';
 import FavoritesPage from './Components/FavoritesPage.js';
 import AboutUs from './Components/AboutUs.js';
-import Burg from './Components/Burg.js';
 import EventsList from './Components/EventsList.js';
 import EventsDetail from './Components/EventsDetail.js';
 
@@ -53,8 +52,6 @@ export default class App extends Component {
       <div>
         <Router>
           <Header />
-          <Burg changeTokenAndUsername={this.changeTokenAndUsername} />
-          {/* <ScrollMenu /> */}
           <Switch>
             <Route
               exact
