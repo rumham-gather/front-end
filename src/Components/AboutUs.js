@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 export default class AboutUs extends Component {
     render() {
         return (
+            <div>
+            <p className="title">About The Developers</p>
             <div className='bio-list'>
                 <div className='bio-item'>
 
@@ -21,7 +23,7 @@ export default class AboutUs extends Component {
                 <div className='bio-item'>
                     <p className='name'>Jena Boehm</p>
                         <img className='photo' src='./jena-bio-pic.jpg' width='150px' height='200px' alt='jena'/>
-                    <p className='bio'>I am Jena. I code and things. La la la. </p>
+                    <p className='bio'>I am Jena. I love to eat food and get lost in code. La la la. </p>
                         <div className='social-links'>
                             <a href="https://www.linkedin.com/in/jenaboehm/">
                                 <img border="0" alt="linkedIn" src="linkedin-logo.png" width="30" height="30" />
@@ -69,6 +71,7 @@ export default class AboutUs extends Component {
                             <img border="0" alt="github" src="github.png" width="30" height="30" />
                     </a>
                     </div>
+                </div>
                 </div>
             </div>
         )
