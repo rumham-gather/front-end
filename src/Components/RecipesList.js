@@ -15,12 +15,12 @@ export default class RecipeListPage extends Component {
         const response = await request.get(`${process.env.REACT_APP_BACK_END_URL}/api/recipes`)
         .set('Authorization', this.props.token)
         this.setState({ recipes: response.body.recipes })
+        console.log(response);
     }
 
     render() {
         return (
             <div>
-                Look at all those recipes
                 {
                     this.state.recipes.length === 0
                     ? <div>Simmering...</div>
