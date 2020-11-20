@@ -16,7 +16,7 @@ export default class RenderRecipe extends Component {
                         <Link to={`/recipes/${recipe.id}`}>
                             <img src={recipe.image} alt={recipe.title} width='300px'/>
                         </Link>
-                            <p className='title'>{recipe.title}</p>
+                            <p className='recipe-title'>{recipe.title}</p>
                         </div>)
                 }
             </div>

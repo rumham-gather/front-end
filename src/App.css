@@ -155,6 +155,10 @@ body {
   transform: scale(1.05)
 }
 
+.recipe-title {
+  font-size: 1.3em;
+}
+
 img {
   border-radius: 10px;
 }
