@@ -7,9 +7,9 @@ export default class AboutUs extends Component {
             <p className="title">About The Developers</p>
             <div className='bio-list'>
                 <div className='bio-item'>
-
                     <p className='name'>Jeff Irvine</p>
                         <img className='photo' src='./jeff-bio-pic.jpg' width='150px' height='200px' alt='jeff'/>
+                    <h4>Software Engineer</h4>
                     <p className='bio'>Hello my name is Jeff. Hot sauce is my one true love. I code all day and sleep all night and live my life to the fullest. Live Laugh Love.</p>
                     <div className='social-links'>
                         <a href="https://www.linkedin.com/in/irvinejeff/">
@@ -23,6 +23,7 @@ export default class AboutUs extends Component {
                 <div className='bio-item'>
                     <p className='name'>Jena Boehm</p>
                         <img className='photo' src='./jena-bio-pic.jpg' width='150px' height='200px' alt='jena'/>
+                    <h4>Software Engineer</h4>
                     <p className='bio'>I am Jena. I love to eat food and get lost in code. La la la. </p>
                         <div className='social-links'>
                             <a href="https://www.linkedin.com/in/jenaboehm/">
@@ -36,6 +37,7 @@ export default class AboutUs extends Component {
                 <div className='bio-item'>
                     <p className='name'>Katie Jones</p>
                         <img className='photo' src='http://placekitten.com/150/200' width='150px' height='200px' alt='katie'/>
+                    <h4>Software Engineer</h4>
                     <p className='bio'>I am Katie Jones. The most interesting person in the world. Yip Yip. </p>
                         <div className='social-links'>
                             <a href="https://www.linkedin.com/in/katiejonesyo/">
@@ -48,8 +50,9 @@ export default class AboutUs extends Component {
                 </div>
                 <div className='bio-item'>
                     <p className='name'>Rosalie Lee</p>
-                        <img className='photo' src='http://placekitten.com/150/200' width='150px' height='200px' alt='rosalie'/>
-                    <p className='bio'>I am Rosalie and I crush it at everything I do. Try to keep up, I dare you. </p>
+                        <img className='photo' src='./rosalie-bio-pic.jpeg' width='150px' height='200px' alt='rosalie'/>
+                    <h4>Software Engineer</h4>
+                    <p className='bio'>Rosalie is a full stack developer and food connoisseur. When she is not eating she is working out, surfing or hiking in effort to later eat what she wants.</p>
                         <div className='social-links'>   
                             <a href="https://www.linkedin.com/in/rosalielee/">
                                 <img border="0" alt="linkedIn" src="linkedin-logo.png" width="30" height="30" />
@@ -62,6 +65,7 @@ export default class AboutUs extends Component {
                 <div className='bio-item'>
                     <p className='name'>Sydney James</p>
                         <img className='photo' src='../sydney-bio-pic.png' width='150px' height='200px' alt='sydney'/>
+                    <h4>Software Engineer</h4>
                     <p className='bio'>Sydney is a fullstack Javascript developer and avid home cook. In her spare time she likes to garden, do house projects, and play with her dogs. </p>
                     <div className='social-links'>
                         <a href="https://www.linkedin.com/in/sydjames/">
