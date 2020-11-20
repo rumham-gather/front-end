@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Glacial Indifference Regular';
+  src: local('Glacial Indifference Regular'), url('./GlacialIndifference.ttf')
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: local('Montserrat Regular'), url('./Montserrat-Regular.otf')
+}

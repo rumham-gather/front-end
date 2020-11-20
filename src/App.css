@@ -1,11 +1,5 @@
-/* @font-face {
-  font-family: 'Glacial Indifference';
-  src: url('./GlacialIndifference.ttf')
-} */
-
 .App {
   text-align: center;
-  font-family: 'Glacial Indifference'
 }
 
 .App-logo {
@@ -33,6 +27,7 @@ body {
 
   background-color: rgb(244, 234, 234);
   text-align: center;
+  font-family: 'Montserrat Regular';
 }
 
 .bio-list {
@@ -56,6 +51,7 @@ body {
   font-size: 2em;
   margin-top: 20px;
   margin-bottom: 50px;
+  font-family: 'Montserrat Regular';
 }
 
 .recipe-list {
