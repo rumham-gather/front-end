@@ -25,6 +25,7 @@ export default class Home extends Component {
                     </video>
                     </div>
                     <div className="content">
+                        <h3>Save Lives By Staying</h3>
                         <h1>Home for the Holidays</h1>
                         <h3>Gather is the ultimate collaborative food resource for the home cook, with daily kitchen tips, and, oh yeah, over 5000+recipes all at your fingertips.</h3>
                     </div>
