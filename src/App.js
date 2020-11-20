@@ -14,7 +14,7 @@ import AboutUs from './Components/AboutUs.js';
 import EventsList from './Components/EventsList.js';
 import EventsDetail from './Components/EventsDetail.js';
 import PrivateRoute from './Burger/PrivateRoutes.js';
-
+import Burg from './Components/Burg.js';
 
 
 export default class App extends Component {
@@ -53,6 +53,7 @@ export default class App extends Component {
       <div>
         <Router>
           <Header />
+          <Burg changeTokenAndUsername={this.changeTokenAndUsername} />
           <Switch>
             <Route
               exact
