@@ -5,8 +5,9 @@ export default class AboutUs extends Component {
         return (
             <div className='bio-list'>
                 <div className='bio-item'>
+
                     <p className='name'>Jeff Irvine</p>
-                        <img className='photo' src='http://placekitten.com/150/200' width='150px' height='200px' alt='jeff'/>
+                        <img className='photo' src='./jeff-bio-pic.jpg' width='150px' height='200px' alt='jeff'/>
                     <p className='bio'>Hello my name is Jeff. Hot sauce is my one true love (especially Sriracha). I code all day and sleep all night and live my life to the fullest. Live Laugh Love.</p>
                     <div className='social-links'>
                         <a href="https://www.linkedin.com/in/irvinejeff/">

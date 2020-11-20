@@ -22,14 +22,16 @@ _Questions or comments can be directed to [Jeff Irvine ](jirvine1212@gmail.com),
 ## Technologies Used
 
 * _React_
-* _CSS_
-* _Netlify_
 * _JavaScript_
+* _CSS_
 * _JSON_
+* _Netlify_
+* _Heroku_
+* _Postman_
 
 ## External API
 
-* _Recipe API_ <-----> CHANGE THIS!
+* _View via [Spoonacular API](https://spoonacular.com/food-api)_
 
 ### License
 
