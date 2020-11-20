@@ -102,6 +102,7 @@ body {
 .title {
   font-size: 2em;
   font-weight: 700;
+  margin: 20px;
 }
 
 .section-details {
@@ -136,10 +137,11 @@ body {
 }
 
 .recipe-list {
-  display: inline-grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .recipe-item {
@@ -197,4 +199,6 @@ a:visited {
   color: rgb(219, 103, 103)
 }
 
-
+.reset-button {
+  margin-top: 30px;
+}

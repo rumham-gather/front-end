@@ -9,7 +9,7 @@ export default class RenderRecipe extends Component {
 
     render() {
         return (
-            <div classname='recipe-list'>
+            <div className='recipe-list'>
                 {
                     this.props.recipeList.map(recipe =>
                         <div key={recipe.title} className='recipe-item'>
