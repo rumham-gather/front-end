@@ -36,9 +36,9 @@ export default class AboutUs extends Component {
                 </div>
                 <div className='bio-item'>
                     <p className='name'>Katie Jones</p>
-                        <img className='photo' src='http://placekitten.com/150/200' width='150px' height='200px' alt='katie'/>
+                        <img className='photo' src='./kt-bio-pic.JPG' width='150px' height='200px' alt='katie'/>
                     <h4>Software Engineer</h4>
-                    <p className='bio'>I am Katie Jones. The most interesting person in the world. Yip Yip. </p>
+                    <p className='bio'>Katie is a fullstack Javascript developer and only cooks when she needs to. In her spare time she likes to play video games, make memes, and ride scooters around downtown Portland in an Appa onesie. </p>
                         <div className='social-links'>
                             <a href="https://www.linkedin.com/in/katiejonesyo/">
                                 <img border="0" alt="linkedIn" src="linkedin-logo.png" width="30" height="30" />
