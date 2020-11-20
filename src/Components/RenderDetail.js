@@ -34,8 +34,6 @@ export default class RenderDetail extends Component {
     }    
 
     render() {
-        // console.log(this.props.recipe);
-        // console.log(this.state.favorites, this.props.token);
         console.log(this.state.favorites);
         return (
             <div className='detail-container'>
@@ -67,16 +65,6 @@ export default class RenderDetail extends Component {
                             </div>
 
                     <div>
-                        {/* {
-                            !!this.state.recipes.length && this.state.recipes.map(recipe => 
-                                <div id={recipe.id}>
-                            {
-                                this.state.favorites.find(favorite => favorite.id === this.props.recipe.id)
-                                ? <div>Hello</div>
-                                : <button onClick={() => this.handleFavorite(recipe)}>Add to Recipe Box</button>
-                            }
-                            </div>)
-                        } */}
                     </div>
                 </div>
                 }
