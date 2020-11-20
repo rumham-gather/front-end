@@ -43,13 +43,15 @@ export default class FavoritesPage extends Component {
         console.log(this.state.favorites);
         return (
             <div>
+            <div className='title'>My Recipe Box</div>
+                <div className="recipe-list">
                 {
                     !!this.state.recipes.length 
                     ? this.state.recipes.map(recipe => {
                         const favorite = this.state.favorites.find(favorite => favorite.recipe_id === recipe.id)
 
                         return (
-                        <div>
+                        <div className="recipe-list">
                             <div className='recipe-item'>
                             <Link to={`/recipes/${recipe.id}`}>
                                 <img src={recipe.image} alt={recipe.title} width='300'/>
@@ -62,6 +64,7 @@ export default class FavoritesPage extends Component {
                     })
                     : <div>Simmering...</div>
                 }
+            </div>
             </div>
         )
     }

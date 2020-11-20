@@ -28,12 +28,12 @@ export default class RecipeListPage extends Component {
     render() {
         return (
             <div>
+                <div className='header'>Recipe List</div>
 
                 <div className='reset-button'>
                     <button onClick={() => this.handleClick()}>More food!</button>
                 </div>
 
-                <div className='header'>Recipe List</div>
 
                 {
                     this.state.recipes.length === 0
