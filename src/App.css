@@ -1,5 +1,11 @@
+/* @font-face {
+  font-family: 'Glacial Indifference';
+  src: url('./GlacialIndifference.ttf')
+} */
+
 .App {
   text-align: center;
+  font-family: 'Glacial Indifference'
 }
 
 .App-logo {
@@ -47,6 +53,36 @@ body {
   padding: 10px;
 }
 
+.header {
+  font-size: 2em;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.recipe-list {
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.recipe-item {
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0px 1px 3px gray;
+}
+
+.recipe-item:hover {
+  transform: scale(1.05)
+}
+
+img {
+  border-radius: 10px;
+}
+
 .header-links {
   
   display: inline-block;
@@ -74,3 +110,4 @@ a:link {
 a:visited {
   color: rgb(0, 0, 0)
 }
+

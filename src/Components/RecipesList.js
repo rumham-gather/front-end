@@ -21,6 +21,7 @@ export default class RecipeListPage extends Component {
     render() {
         return (
             <div>
+                <div className='header'>Recipe List</div>
                 {
                     this.state.recipes.length === 0
                     ? <div>Simmering...</div>
