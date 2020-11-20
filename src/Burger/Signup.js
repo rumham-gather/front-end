@@ -25,7 +25,7 @@ export class Signup extends Component {
         
         this.props.changeTokenAndUsername(user.body.email, user.body.display_name, user.body.token);
 
-        this.props.history.push('/about');
+        this.props.history.push('/recipes');
 
     }
     
