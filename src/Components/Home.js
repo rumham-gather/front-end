@@ -8,7 +8,6 @@ export default class Home extends Component {
         return (
            <div>
             <main>
-                
                 <div className="homepage">
                     <div className="video">
                     <video autoPlay loop muted
@@ -35,7 +34,7 @@ export default class Home extends Component {
                     </div>
                 </div>
             </main>
-        </div> 
+            </div> 
         )
     }
 }

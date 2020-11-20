@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import request from 'superagent';
+import { withRouter } from 'react-router-dom';
 
 
-
-export default class Login extends Component {
+export class Login extends Component {
     state = {
         email: '',
         display_name: '',
         password: '',
         loading: false,
-        err: null
     }
   
     handleSubmit = async (e) => {
@@ -18,7 +17,6 @@ export default class Login extends Component {
         
         this.setState({ loading:true, err:null })
   
-        try {
         const user = await request
             .post(`${process.env.REACT_APP_BACK_END_URL}/auth/signin`)
             .send(this.state); // we can send state because the keys are the same on the front and back end
@@ -27,14 +25,10 @@ export default class Login extends Component {
         
         this.props.changeTokenAndUsername(user.body.token, user.body.email, user.body.display_name);
         
-        // this.props.history.history.push('/recipes')
-        } catch(err){
-            this.setState({ err: 'Oops! Must have proper email to sign in.'})
-        }
-    }
+        this.props.history.push('/recipes')
+    } 
   
     render() {
-        console.log(this.state.err);
         return (
             <div>
 
@@ -42,10 +36,7 @@ export default class Login extends Component {
                     <h2>Log in</h2>
                     Email:
                     <label>
-                        {this.state.err && <div>
-                            {this.state.err}
-                             </div>}
-                             <br/>
+                        <br/>
                         <input 
                         onChange={(e) => this.setState({ email: e.target.value })}
                         value={this.state.email} />
@@ -72,5 +63,5 @@ export default class Login extends Component {
     }
   }
   
-  
+  export default withRouter(Login);
   
