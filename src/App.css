@@ -1,11 +1,5 @@
-/* @font-face {
-  font-family: 'Glacial Indifference';
-  src: url('./GlacialIndifference.ttf')
-} */
-
 .App {
   text-align: center;
-  font-family: 'Glacial Indifference'
 }
 
 .App-logo {
@@ -25,15 +19,17 @@ header {
   background-color: rgb(255, 255, 255);
   padding-top: 2%;
   padding-bottom: 1%;
+  text-align: left;
+  box-shadow: 0px 1px 5px gray;
   padding-left: 2%;
   text-align: center;
 
 }
 
 body {
-
   background-color: rgb(244, 234, 234);
   text-align: center;
+  font-family: 'Montserrat Regular';
 }
 
 .bio-list {
@@ -52,20 +48,6 @@ body {
   margin: 5px;
   padding: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .add-button {
   border-radius: 5px;
@@ -111,11 +93,12 @@ body {
 .section-header {
   font-size: 1.3em;
 }
-=======
+
 .header {
   font-size: 2em;
   margin-top: 20px;
   margin-bottom: 50px;
+  font-family: 'Montserrat Regular';
 }
 
 .recipe-list {
@@ -142,6 +125,14 @@ img {
   border-radius: 10px;
 }
 
+a:visited {  
+  color: rgb(219, 103, 103)
+}
+
+a:hover {
+  text-decoration: underline
+}
+
 .header-links {
   
   display: inline-block;
@@ -159,15 +150,13 @@ li {
   
 }
 
-
-a:link {
-  text-decoration: none;
-  color: rgb(0, 0, 0)
+a:hover {
+  text-decoration: underline;
 }
 
 
 a:visited {
-  color: rgb(0, 0, 0)
+  color: rgb(219, 103, 103)
 }
 
 
