@@ -1,22 +1,25 @@
 /*Scroll menu*/
 .menu-item {
     padding: 0 40px;
-    margin: 5px 10px;
+    margin: 10px 10px;
     user-select: none;
     cursor: pointer;
     border: none;
-    
+    height: 20%;
+    margin-top: 50%;
   }
   .menu-item-wrapper.active {
-    border: 1px blue solid;
+    border: 1px white;
   }
   .menu-item.active {
-    border: 1px rgb(0, 0, 0) solid;
-    
+    border: 1px rgb(255, 255, 255) solid;
   }
   
   .scroll-menu-arrow {
     padding: 20px;
+    font-size: 50px;
+    font-weight: bolder;
     cursor: pointer;
-    
+    color: whitesmoke;
+
   }
