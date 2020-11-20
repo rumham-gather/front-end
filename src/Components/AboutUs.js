@@ -8,26 +8,58 @@ export default class AboutUs extends Component {
                     <p className='name'>Jeff Irvine</p>
                     <img className='photo' src='http://placekitten.com/150/200'  alt=''/>
                     <p className='bio'>Hello my name is Jeff. Hot sauce is my one true love (especially Sriracha). I code all day and sleep all night and live my life to the fullest. Live Laugh Love.</p>
+                    <a href="https://www.linkedin.com/in/irvinejeff/">
+                    <img border="0" alt="linkedIn" src="linkedin-logo.png" width="100" height="100" />
+                    </a>
+                    <a href="https://github.com/jeffIrvine/">
+                    <img border="0" alt="github" src="github.png" width="100" height="100" />
+                    </a>
                 </div>
                 <div className='bio-item'>
                     <p className='name'>Jena Boehm</p>
                     <img className='photo' src='./jena-bio-pic.jpg' width='150px' height='200px'  alt=''/>
                     <p className='bio'>I am Jena. I code and things. La la la. </p>
+                    <a href="https://www.linkedin.com/in/jenaboehm/">
+                    <img border="0" alt="linkedIn" src="linkedin-logo.png" width="100" height="100" />
+                    </a>
+                    <a href="https://github.com/jena-boehm">
+                    <img border="0" alt="github" src="github.png" width="100" height="100" />
+                    </a>
                 </div>
                 <div className='bio-item'>
                     <p className='name'>Katie Jones</p>
                     <img className='photo' src='http://placekitten.com/150/200' alt='' />
                     <p className='bio'>I am Katie Jones. The most interesting person in the world. Yip Yip. </p>
+                    
+                    <a href="https://www.linkedin.com/in/katiejonesyo/">
+                    <img border="0" alt="linkedIn" src="linkedin-logo.png" width="100" height="100" />
+                    </a>
+                    <a href="https://github.com/katiejonesyo">
+                    <img border="0" alt="github" src="github.png" width="100" height="100" />
+                    </a>
                 </div>
                 <div className='bio-item'>
                     <p className='name'>Rosalie Lee</p>
                     <img className='photo' src='http://placekitten.com/150/200' alt=''/>
                     <p className='bio'>I am Rosalie and I crush it at everything I do. Try to keep up, I dare you. </p>
+                    <a href="https://www.linkedin.com/in/rosalielee/">
+                    <img border="0" alt="linkedIn" src="linkedin-logo.png" width="100" height="100" />
+                    </a>
+                    <a href="https://github.com/scjam">
+                    <img border="0" alt="github" src="github.png" width="100" height="100" />
+                    </a>
                 </div>
                 <div className='bio-item'>
                     <p className='name'>Sydney James</p>
                     <img className='photo' src='../sydney-bio-pic.png' alt=''/>
                     <p className='bio'>Sydney is a fullstack Javascript developer and avid home cook. In her spare time she likes to garden, do house projects, and play with her dogs. </p>
+                    <a href="https://www.linkedin.com/in/sydjames/">
+                    <img border="0" alt="linkedIn" src="linkedin-logo.png" width="100" height="100" />
+                    </a>
+                    <a href="https://github.com/rosalie337/">
+                    <img border="0" alt="github" src="github.png" width="100" height="100" />
+                    </a>
+                </div>
                 </div>
             </div>
         )
