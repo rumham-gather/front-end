@@ -12,7 +12,7 @@ export default class EventsList extends Component {
     }
 
     fetchEvents = async () => {
-        const response = await request.get(`https://floating-caverns-16024.herokuapp.com/events`)
+        const response = await request.get(`${process.env.REACT_APP_BACK_END_URL}/events`)
 
         this.setState({ events: response.body })
     }

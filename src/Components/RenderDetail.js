@@ -49,6 +49,7 @@ export default class RenderDetail extends Component {
                             <p className='section-details'>{this.props.recipe.diets}</p>
                             <div className='summary-container'>
                             <p className="section-header">Summary: </p>
+                            {/* nice find! this could get dangerous if a user puts malicious html inside a recipe (google cross-site scripting attacks for more details) */}
                             <p className='section-details'>{reactHtmlParser(this.props.recipe.summary)}</p>
                             </div>
 

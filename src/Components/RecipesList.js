@@ -19,9 +19,8 @@ export default class RecipeListPage extends Component {
     }
 
     handleClick = async () => {
-        const response = await request.get(`${process.env.REACT_APP_BACK_END_URL}/api/recipes`)
-        .set('Authorization', this.props.token)
-        this.setState({ recipes: response.body.recipes })
+        // duplicate code
+        await this.fetchRecipes();
         console.log(response);
     }
 
@@ -33,8 +32,6 @@ export default class RecipeListPage extends Component {
                 <div className='reset-button'>
                     <button onClick={() => this.handleClick()}>More food!</button>
                 </div>
-
-
                 {
                     this.state.recipes.length === 0
                     ? <div>Simmering...</div>

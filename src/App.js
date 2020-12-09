@@ -53,6 +53,7 @@ export default class App extends Component {
       <div>
         <Router>
           <Header />
+          {/* burg! */}
           <Burg changeTokenAndUsername={this.changeTokenAndUsername} />
           <Switch>
             <Route

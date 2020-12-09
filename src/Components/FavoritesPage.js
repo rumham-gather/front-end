@@ -14,6 +14,7 @@ export default class FavoritesPage extends Component {
 
     fetchFavorites = async () => {
         const response = await request
+        // i would have liked to see a utils file for all these fetches, rather than have them clogging up the components
             .get(`${process.env.REACT_APP_BACK_END_URL}/api/user-recipes`)
             .set('Authorization', this.props.token)
 
@@ -48,6 +49,7 @@ export default class FavoritesPage extends Component {
                 {
                     !!this.state.recipes.length 
                     ? this.state.recipes.map(recipe => {
+                        // cool, so "for each recipe, find the corresponding 'favorite'" so it can be deleted? could this favorite_id have lived on the reciple instead?
                         const favorite = this.state.favorites.find(favorite => favorite.recipe_id === recipe.id)
 
                         return (
@@ -62,6 +64,7 @@ export default class FavoritesPage extends Component {
                         </div>
                         )
                     })
+                    // teehee
                     : <div>Simmering...</div>
                 }
             </div>
