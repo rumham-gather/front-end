@@ -11,6 +11,7 @@ export default class Home extends Component {
                 <div className="homepage">
                     <div className="video">
                     <video autoPlay loop muted
+                    // seems like this should live in a css className
                     style={{
                         position: "absolute",
                         width: "100%",

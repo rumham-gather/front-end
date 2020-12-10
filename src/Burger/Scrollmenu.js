@@ -29,6 +29,7 @@ export const Menu = (list, selected) =>
   });
 
 
+  // some nice functional components here!
 const Arrow = ({ text, className }) => {
   return (
     <div
@@ -77,13 +78,3 @@ export default class App extends Component {
     );
   }
 }
-
-
-render(<ScrollMenu />, document.getElementById("root"));
-
-ReactDOM.render(
-    <React.StrictMode>
-    <ScrollMenu />
-  </React.StrictMode>,
-  document.getElementById('root')
-  );
