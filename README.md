@@ -29,7 +29,7 @@ _Questions or comments can be directed to [Jeff Irvine ](jirvine1212@gmail.com),
 
 ## External API
 
-* _Recipe API_ <-----> CHANGE THIS!
+* [Spoonacular API](https://spoonacular.com/food-api)
 
 ### License
 
